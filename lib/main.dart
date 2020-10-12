@@ -30,6 +30,8 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
 
   @override
   void initState() {
+    super.initState();
+
     spinkit = SpinKitSquareCircle(
       color: Colors.black87,
       size: 50.0,
@@ -37,8 +39,8 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
           vsync: this, duration: const Duration(milliseconds: 1000)),
     );
 
-    Future.delayed(const Duration(seconds: 4), () async {
-      Navigator.push(
+    Future.delayed(const Duration(seconds: 3), () async {
+      Navigator.pushReplacement(
           context, new MaterialPageRoute(builder: (context) => new Home()));
     });
   }
